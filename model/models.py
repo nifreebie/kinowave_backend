@@ -69,7 +69,7 @@ class QuizOption(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     question_id = db.Column(db.Integer, db.ForeignKey('quiz_questions.id'), nullable=False)
     option_text = db.Column(db.String(255), nullable=False)
-    genre_id = db.Column(db.Integer, db.ForeignKey('genres.id'))  # опционально, если связаны с жанрами
+    genre_id = db.Column(db.Integer, db.ForeignKey('genres.id'))
     weight = db.Column(db.Integer, default=1)
 
 class UserQuizAnswer(db.Model):
